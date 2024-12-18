@@ -1,9 +1,10 @@
 :root {
     /* Renk değişkenleri */
     --primary-color: #1e3a8a;   
-    --secondary-color: #9333ea; 
-    --background-color: #f3f4f6; 
-    --text-color: #111827; 
+    --secondary-color: #10375C; 
+    --background-color: #001F3F; 
+    --text-color: #00ffee; 
+
   
     /* Font değişkenleri */
     --font-primary: 'Inter', sans-serif;

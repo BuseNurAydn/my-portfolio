@@ -1,6 +1,6 @@
 
 import About from '../components/About';
-import Experience from '../components/Experience';
+import Experiences from '../components/Experiences';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import Projects from '../components/Projects';
@@ -8,9 +8,9 @@ import Projects from '../components/Projects';
 const HomePage = () => {
   return (
     <div>
-        <Navbar/>
+        <Navbar text='Buse Nur Aydın'/>
         <About/>
-        <Experience/>
+        <Experiences/>
         <Projects/>
         <Footer/>
     </div>
