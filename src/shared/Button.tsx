@@ -5,8 +5,8 @@ type Props = {
 }
 
 const Button = ({children}: Props) => {
-  return (
-    <a>{children}</a>
+  return ( 
+    <a className='bg-transparent border-solid rounded-full border-slate-800 p-4 bg-gray-600 mr-2 cursor-pointer'>{children}</a>
   )
 }
 
