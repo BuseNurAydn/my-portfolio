@@ -17,7 +17,7 @@ export default {
         secondary: ['var(--font-secondary)'],
       },
       backgroundImage: {
-        aboutImage: "url('./src/assets/images/BgAbout.svg')",
+        aboutImage: "url('./src/assets/images/svg/BgAbout.svg')",
       },
     },
   },

@@ -4,7 +4,7 @@ import IconBar from '../assets/icons/IconBar.svg'; //heroicons
 import IconDownload from '../assets/icons/IconDownload.svg';
 
 const Navbar = ({ text }: { text: string }) => {
-  const Link = 'text-lg hover:text-blue-900 transition duration-300 '
+  const Link = 'text-lg hover:text-blue-900 transition duration-200 '
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -14,7 +14,7 @@ const Navbar = ({ text }: { text: string }) => {
   const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
 
   return (
-    <nav className="px-6 py-4 rounded-lg bg-white shadow-lg">
+    <nav className="px-6 py-4 shadow-xl bg-white sticky top-0 z-20">
       <div className='flex items-center md:justify-around justify-between'>
         <div style={{ display: 'flex' }}>
           {letters.map((letter, index) => (
@@ -39,7 +39,8 @@ const Navbar = ({ text }: { text: string }) => {
         </ul>
         <div className='md:flex hidden border-2 border-dashed px-2 py-1 rounded-lg'>
           <img src={IconDownload} className={`${Link} h-5 w-5 mr-2`} />
-          <a href="">Download CV</a>
+          <a href="https://drive.google.com/file/d/1dx4eZtaG2lGLCyFPb0uDxHf_OD67GNTJ/view?usp=drive_link
+                "target="_blank">Download CV</a>
           </div>
         <div className='md:hidden'> 
              <img src={IconBar} alt="Icon Bar" className="h-8 w-8" onClick={toggleMenu} />

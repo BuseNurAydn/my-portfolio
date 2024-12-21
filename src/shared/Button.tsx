@@ -1,13 +1,34 @@
-import React from 'react'
+
+import React from 'react';
 
 type Props = {
-    children: React.ReactNode;
-}
+  children: React.ReactNode;
+  href?: string; 
+  onClick?: () => void;
+  className?: string; 
+};
 
-const Button = ({children}: Props) => {
-  return ( 
-    <a className='bg-transparent border-solid rounded-full border-slate-800 p-4 bg-gray-600 mr-2 cursor-pointer'>{children}</a>
-  )
-}
+const Button = ({ children, href, onClick, className = '' }: Props) => {
+  const baseClasses ='text-cyan-900 rounded-full p-3 text-xl border border-slate-800 mr-2 mt-4 cursor-pointer transition-colors duration-200 hover:bg-cyan-900 hover:text-white bg-transparent hover:shadow-2xl transition-transform transform hover:scale-125 hover:-translate-y-1';
 
-export default Button
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${baseClasses} ${className}`}
+      >
+        {children}
+      </a>
+    );
+  }
+
+  return (
+    <button onClick={onClick} className={`${baseClasses} ${className}`}>
+      {children}
+    </button>
+  );
+};
+
+export default Button;
