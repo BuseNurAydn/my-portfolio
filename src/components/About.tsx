@@ -7,7 +7,7 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 
 const About = () => {
   return (
-    <section className='flex flex-col md:flex-row items-center justify-between relative h-screen'>
+    <section id='about' className='flex flex-col md:flex-row items-center justify-between relative h-screen'>
 
       <motion.div
         className="flex-1 flex flex-col space-y-4 md:pl-20 m-6 md:m-0"

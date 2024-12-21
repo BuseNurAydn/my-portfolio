@@ -34,6 +34,7 @@ const Navbar = ({ text }: { text: string }) => {
         </div>
         <ul className="md:flex hidden space-x-6">
           <li><a href="#about" className={`${Link}`}>About</a></li>
+          <li><a href="#skills" className={`${Link}`}>Skills</a></li>
           <li><a href="#experiences" className={`${Link}`}>Experiences</a></li>
           <li><a href="#projects" className={`${Link}`}>Projects</a></li>
         </ul>
