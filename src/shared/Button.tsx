@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Button = ({ children, href, onClick, className = '' }: Props) => {
-  const baseClasses ='text-cyan-900 rounded-full p-3 text-xl border border-slate-800 mr-2 mt-4 cursor-pointer transition-colors duration-200 hover:bg-cyan-900 hover:text-white bg-transparent hover:shadow-2xl transition-transform transform hover:scale-125 hover:-translate-y-1';
+  const baseClasses ='text-teal-600 rounded-full p-3 text-xl border border-teal-600  mr-2 mt-4 cursor-pointer transition-colors duration-200 hover:bg-cyan-900 hover:text-white hover:border-none bg-transparent hover:border-shadow-2xl transition-transform transform hover:scale-125 hover:-translate-y-1';
 
   if (href) {
     return (
