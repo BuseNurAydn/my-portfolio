@@ -36,7 +36,7 @@ const About = () => {
         {/* Arka Plan*/}
         <div className="absolute inset-0 bg-cover bg-aboutImage bg-no-repeat hidden md:block"></div>
         {/* Profil Resmi */}
-        <div className="z-20">
+        <div className="z-10">
           <img
             src={profil}
             alt="Profile"
