@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Htext from '../shared/Htext';
+
 type Props = {}
 
 function Arrow(props:any) {
@@ -41,8 +42,8 @@ const Skills = (props: Props) => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 6,
-          slidesToScroll: 6,
+          slidesToShow: 5,
+          slidesToScroll: 5,
           infinite: true,
           dots: true,
           arrows: false
@@ -72,7 +73,7 @@ const Skills = (props: Props) => {
   };
 
   return (
-    <section id="skills" className="md:px-20 px-6 bg-zinc-200 mt-4">
+    <section id="skills" className="md:px-20 px-4 bg-zinc-200 mt-4">
       <div className="mt-6">
         <Htext>Skills</Htext>
         <div className="text-black text-center pointer text-xs font-semibold rounded-lg mb-8">

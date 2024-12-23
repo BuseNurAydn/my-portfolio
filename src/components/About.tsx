@@ -7,7 +7,7 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 
 const About = () => {
   return (
-    <section id='about' className='flex flex-col md:flex-row items-center justify-between relative h-screen'>
+    <section id='about' className='flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
 
       <motion.div
         className="flex-1 flex flex-col space-y-4 md:pl-20 m-6 md:m-0"
@@ -40,7 +40,7 @@ const About = () => {
           <img
             src={profil}
             alt="Profile"
-            className="relative md:-translate-y-12"
+            className="relative h-auto  md:-translate-y-12"
           />
         </div>
       </div>
