@@ -73,7 +73,7 @@ const Skills = (props: Props) => {
   };
 
   return (
-    <section id="skills" className="md:px-20 px-4 bg-zinc-200 mt-4">
+    <section id="skills" className="md:px-8 px-2 bg-zinc-200 mt-4">
       <div className="mt-6">
         <Htext>Skills</Htext>
         <div className="text-black text-center pointer text-xs font-semibold rounded-lg mb-8">

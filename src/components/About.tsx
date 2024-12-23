@@ -10,7 +10,7 @@ const About = () => {
     <section id='about' className='flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
 
       <motion.div
-        className="flex-1 flex flex-col space-y-4 md:pl-20 m-6 md:m-0"
+        className="flex-1 flex flex-col space-y-4 md:pl-10 m-6 md:m-0"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
@@ -40,7 +40,7 @@ const About = () => {
           <img
             src={profil}
             alt="Profile"
-            className="relative h-auto  md:-translate-y-12"
+            className="relative md:-translate-y-12"
           />
         </div>
       </div>
