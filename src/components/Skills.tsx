@@ -2,36 +2,19 @@ import { skills } from '../utils/skillsData'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import Htext from '../shared/Htext';
 type Props = {}
 
-function Arrow(props: any) {
+function Arrow(props:any) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} custom-arrow ${className.includes("slick-next")
-        }`}
-      style={{
-        position: "absolute",
-        top: "40%",
-        transform: "translateY(-50%)",
-        borderRadius: "50%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        zIndex: 10,
-        cursor: "pointer",
-      }}
+      className={className}
+      style={{ ...style, display: "block" }}
       onClick={onClick}
-    >
-      {className.includes("slick-next") ? (
-        <span style={{ fontSize: "40px", color: "darkblue" }}>›</span>
-      ) : (
-        <span style={{ fontSize: "40px", color: "darkblue", paddingRight: "70px" }}>‹</span>
-      )}
-    </div>
+    />
   );
-};
+}
 
 const Skills = (props: Props) => {
   var settings = {
@@ -41,8 +24,8 @@ const Skills = (props: Props) => {
     arrows: true,
     slidesToShow: 8,
     slidesToScroll: 1,
-    nextArrow: <Arrow />,
-    prevArrow: <Arrow />,
+    nextArrow: <Arrow/>,
+    prevArrow: <Arrow/>,
 
     responsive: [
       {
@@ -51,7 +34,7 @@ const Skills = (props: Props) => {
           slidesToShow: 8,
           slidesToScroll: 3,
           infinite: true,
-          dots: false,
+          dots: true,
           arrows: false
         }
       },
@@ -61,7 +44,7 @@ const Skills = (props: Props) => {
           slidesToShow: 6,
           slidesToScroll: 6,
           infinite: true,
-          dots: false,
+          dots: true,
           arrows: false
         }
       },
@@ -71,7 +54,7 @@ const Skills = (props: Props) => {
           slidesToShow: 4,
           slidesToScroll: 4,
           infinite: true,
-          dots: false,
+          dots: true,
           arrows: false
         }
       },
@@ -81,7 +64,7 @@ const Skills = (props: Props) => {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          dots: false,
+          dots: true,
           arrows: false
         }
       }
@@ -89,17 +72,17 @@ const Skills = (props: Props) => {
   };
 
   return (
-    <section id="skills" className="md:px-20 px-6 bg-slate-50 mt-4">
+    <section id="skills" className="md:px-20 px-6 bg-zinc-200 mt-4">
       <div className="mt-6">
-        <h1 className="text-2xl font-bold mb-8">Skills</h1>
-        <div className="text-black text-center pointer text-xs font-semibold rounded-lg">
+        <Htext>Skills</Htext>
+        <div className="text-black text-center pointer text-xs font-semibold rounded-lg mb-8">
           <Slider {...settings}>
             {skills.map((skill, index) => (
-              <div key={index} className="p-6 bg-white rounded">
+              <div key={index} className="p-6 bg-white rounded-lg cursor-pointer">
                 <div>
-                  <img src={skill.image} alt='' className='h-20 w-20 text-center flex mx-auto rounded-full'></img>
+                  <img src={skill.image} alt='' className='h-16 w-16 text-center flex mx-auto '></img>
                 </div>
-                <div className='flex flex-col justify-center items-center gap-y-2 p-2'>
+                <div className='flex flex-col text-blue-950 font-bold justify-center items-center gap-y-2 p-2'>
                   <h3 className='rounded-b-lg'>{skill.title}</h3>
                 </div>
               </div>
@@ -111,4 +94,4 @@ const Skills = (props: Props) => {
   )
 }
 
-export default Skills
+export default Skills;
