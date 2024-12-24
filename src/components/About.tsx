@@ -39,13 +39,13 @@ const About = () => {
 
       <div className="flex-1 flex items-center justify-center relative h-full">
         {/* Arka Plan*/}
-       <div className="absolute inset-0  bg-cover bg-aboutImage bg-no-repeat hidden md:block"></div>
-        {/* Profil Resmi */}
+        <div className="absolute inset-0 bg-aboutImage bg-no-repeat bg-cover hidden md:block md:top-20"></div>
+       {/* Profil Resmi */}
         <div className="z-10">
           <img
             src={profil}
             alt="Profile"
-            className="relative md:-translate-y-12"
+            className="relative md:-translate-x-12"
           />
         </div>
       </div>
