@@ -8,12 +8,17 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 const About = () => {
   return (
     <section id='about' className='flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
-
-      <motion.div
-        className="flex-1 flex flex-col space-y-4 md:pl-10 m-6 md:m-0"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+   <motion.div
+       className="flex-1 flex flex-col space-y-4 md:pl-10 pl-4 m-6 md:m-0 container mx-auto"
+        animate={{ opacity: 1 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{ duration: 0.2 }}
+        variants={{
+          hidden: { opacity: 0, x: -50 },
+          visible: { opacity: 1, x: 0 },
+        }}
       >
         <motion.span
           initial={{ opacity: 0, y: 50 }}
@@ -34,7 +39,7 @@ const About = () => {
 
       <div className="flex-1 flex items-center justify-center relative h-full">
         {/* Arka Plan*/}
-        <div className="absolute inset-0 bg-cover bg-aboutImage bg-no-repeat hidden md:block"></div>
+        <div className="absolute inset-0 object-cover bg-cover bg-aboutImage bg-no-repeat hidden md:block"></div>
         {/* Profil Resmi */}
         <div className="z-10">
           <img
@@ -44,7 +49,6 @@ const About = () => {
           />
         </div>
       </div>
-
     </section>
   )
 }
