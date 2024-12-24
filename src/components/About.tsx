@@ -7,9 +7,9 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 
 const About = () => {
   return (
-    <section id='about' className='flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
+    <section id='about' className='md:container md:mx-auto flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
    <motion.div
-       className="flex-1 flex flex-col space-y-4 md:pl-10 pl-4 m-6 md:m-0 container mx-auto"
+       className="flex-1 flex flex-col space-y-4 m-6 md:m-0"
         animate={{ opacity: 1 }}
         initial="hidden"
         whileInView="visible"
@@ -39,7 +39,7 @@ const About = () => {
 
       <div className="flex-1 flex items-center justify-center relative h-full">
         {/* Arka Plan*/}
-        <div className="absolute inset-0 object-cover bg-cover bg-aboutImage bg-no-repeat hidden md:block"></div>
+       <div className="absolute inset-0  bg-cover bg-aboutImage bg-no-repeat hidden md:block"></div>
         {/* Profil Resmi */}
         <div className="z-10">
           <img
