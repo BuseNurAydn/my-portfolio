@@ -17,8 +17,8 @@ const Experiences = (props: Props) => {
           viewport={{ once: false, amount: 0.4 }}
           transition={{ duration: 0.4 }}
           variants={{
-            hidden: { opacity: 0, x: -50 },
-            visible: { opacity: 1, x: 0 },
+            hidden: { opacity: 0, y: 50 }, // Aşağıdan başlıyor
+            visible: { opacity: 1, y: 0 }, // Yukarıya doğru hareket ediyor
           }}
         >
           <div className="grid md:grid-cols-2 text-center px-2 gap-x-8">

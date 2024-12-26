@@ -13,8 +13,8 @@ const About = () => {
         animate={{ opacity: 1 }}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
-        transition={{ duration: 0.2 }}
+        viewport={{ once: false, amount: 0.4 }}
+        transition={{ duration: 0.4 }}
         variants={{
           hidden: { opacity: 0, x: -50 },
           visible: { opacity: 1, x: 0 },
@@ -34,12 +34,12 @@ const About = () => {
           <Button href="https://www.linkedin.com/in/buse-nur-ayd%C4%B1n-a18967227/"><FaLinkedin /></Button>
           <Button href="https://github.com/BuseNurAydn"><FaGithub /></Button>
           <Button href="mailto:busenuraydin521@gmail.com"><SiGmail /></Button>
-        </div>
+        </div> 
       </motion.div>
 
       <div className="flex-1 flex items-center justify-center relative h-full">
         {/* Arka Plan*/}
-        <div className="absolute inset-0 bg-aboutImage bg-no-repeat bg-cover hidden md:block md:top-20"></div>
+        <div className="absolute bg-cover bg-no-repeat bg-aboutImage inset-0 hidden md:block md:top-20"></div>
        {/* Profil Resmi */}
         <div className="z-10">
           <img

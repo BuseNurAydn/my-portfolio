@@ -1,7 +1,17 @@
+import Htext from "../shared/Htext";
 
-const Projects = () => {
+type Props = {}
+
+const Projects = (props: Props) => {
   return (
-    <div></div>
+    <section id="projects">
+      <div>
+        <Htext>Projects</Htext>
+     
+      
+      </div>
+      
+     </section>
   )
 }
 
