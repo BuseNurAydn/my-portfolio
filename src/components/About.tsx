@@ -9,7 +9,7 @@ const About = () => {
   return (
     <section id='about' className='md:container md:mx-auto flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
    <motion.div
-       className="flex-1 flex flex-col space-y-4 m-6 md:m-0"
+       className="md:w-3/5 space-y-4 p-6 md:p-0"
         animate={{ opacity: 1 }}
         initial="hidden"
         whileInView="visible"
@@ -37,7 +37,7 @@ const About = () => {
         </div> 
       </motion.div>
 
-      <div className="flex-1 flex items-center justify-center relative h-full">
+      <div className="md:w-2/5 flex items-center justify-center relative h-full">
         {/* Arka Plan*/}
         <div className="absolute bg-cover bg-no-repeat bg-aboutImage inset-0 hidden md:block md:top-20"></div>
        {/* Profil Resmi */}
