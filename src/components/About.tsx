@@ -7,7 +7,7 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 
 const About = () => {
   return (
-    <section id='about' className='md:container md:mx-auto flex flex-col md:flex-row items-center justify-between relative md:h-screen overflow-auto md:overflow-visible'>
+    <section id='about' className='md:container md:mx-auto flex flex-col md:flex-row items-center justify-between relative md:py-32 overflow-auto md:overflow-visible'>
    <motion.div
        className="md:w-3/5 space-y-4 p-6 md:p-0"
         animate={{ opacity: 1 }}
@@ -39,13 +39,13 @@ const About = () => {
 
       <div className="md:w-2/5 flex items-center justify-center relative h-full">
         {/* Arka Plan*/}
-        <div className="absolute bg-cover bg-no-repeat bg-aboutImage inset-0 hidden md:block md:top-20"></div>
+        <div className="absolute bg-cover bg-no-repeat inset-0 hidden md:block md:top-20"></div>
        {/* Profil Resmi */}
         <div className="z-10">
           <img
             src={profil}
             alt="Profile"
-            className="relative md:-translate-x-12"
+            className="relative"
           />
         </div>
       </div>
