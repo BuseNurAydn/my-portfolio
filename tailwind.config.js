@@ -7,10 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: 'var(--primary-color)',
-        secondary: 'var(--secondary-color)',
-        background: 'var(--background-color)',
-        textColor: 'var(--text-color)',
+          'brand-color':'#0d9488',
+          'black-color':'#0c0a09',
+          'second-color':'#134e4a',
+          'gray-color':'#4b5563',
+          'blue-color':'#1e3a8a',
+          'cyan-color':'#155e75',
+          'graytwo-color':'#d1d5db',
+          'darkCyan-color': '#083344',
+          'zinc200-color': '#e4e4e7',
+          'zinc-color': '#f4f4f5',
+          'sky-color': '#075985',
+          'slate-color': '#e2e8f0',     
       },
       fontFamily: {
         primary: ['var(--font-primary)'],

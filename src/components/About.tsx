@@ -5,6 +5,7 @@ import profil from '../assets/images/png/profilFoto.png'
 import { motion } from 'framer-motion' //animasyon için //framer animation
 
 
+
 const About = () => {
   return (
     <section id='about' className='md:container md:mx-auto flex flex-col md:flex-row items-center justify-between relative md:py-32 overflow-auto md:overflow-visible'>
@@ -20,16 +21,10 @@ const About = () => {
           visible: { opacity: 1, x: 0 },
         }}
       >
-        <motion.span
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 100, damping: 25 }}
-          className="font-semibold text-xl text-teal-600"
-        > 
-        Frontend Developer
-        </motion.span>
-        <h1 className="font-bold text-3xl text-cyan-800 ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
-        <p>I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
+      
+        <h2 className='font-semibold text-xl text-brand-color animate-bounce'>Frontend Developer</h2> 
+        <h1 className="font-bold text-3xl text-cyan-color ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
+        <p>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
         <div className="flex gap-x-6">
           <Button href="https://www.linkedin.com/in/buse-nur-ayd%C4%B1n-a18967227/"><FaLinkedin /></Button>
           <Button href="https://github.com/BuseNurAydn"><FaGithub /></Button>
@@ -38,10 +33,9 @@ const About = () => {
       </motion.div>
 
       <div className="md:w-2/5 flex items-center justify-center relative h-full">
-        {/* Arka Plan*/}
-        <div className="absolute bg-cover bg-no-repeat inset-0 hidden md:block md:top-20"></div>
+      
        {/* Profil Resmi */}
-        <div className="z-10">
+        <div className="z-10 md:bg-gray-color md:p-20 ">
           <img
             src={profil}
             alt="Profile"

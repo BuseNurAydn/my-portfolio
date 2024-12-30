@@ -73,17 +73,17 @@ const Skills = (props: Props) => {
   };
 
   return (
-    <section id="skills" className=" md:px-0 px-4 bg-zinc-200 mt-4 ">
+    <section id="skills" className=" md:px-0 px-4 bg-zinc200-color mt-4 ">
       <div className="mt-6 md:container md:mx-auto">
         <Htext>Skills</Htext>
-        <div className="text-black text-center pointer text-xs font-semibold rounded-lg mb-8">
+        <div className="text-black-color text-center pointer text-xs font-semibold rounded-lg mb-8">
           <Slider {...settings}>
             {skills.map((skill, index) => (
               <div key={index} className="p-6 bg-white rounded-lg cursor-pointer">
                 <div>
-                  <img src={skill.image} alt='' className='h-16 w-16 text-center flex mx-auto '></img>
+                  <img src={skill.image} alt='' className='h-16 w-16 text-center flex mx-auto'></img>
                 </div>
-                <div className='flex flex-col text-blue-950 font-bold justify-center items-center gap-y-2 p-2'>
+                <div className='flex flex-col text-blue-color font-bold justify-center items-center gap-y-2 p-2'>
                   <h3 className='rounded-b-lg'>{skill.title}</h3>
                 </div>
               </div>

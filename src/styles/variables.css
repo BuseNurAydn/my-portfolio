@@ -1,11 +1,5 @@
 :root {
-    /* Renk değişkenleri */
-    --primary-color: #1e3a8a;   
-    --secondary-color: #10375C; 
-    --background-color: #001F3F; 
-    --text-color: #00ffee; 
-
-  
+   
     /* Font değişkenleri */
     --font-primary: 'Inter', sans-serif;
     --font-secondary: 'Roboto', sans-serif;

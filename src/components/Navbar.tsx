@@ -26,7 +26,7 @@ const Navbar = ({ text }: { text: string }) => {
                 delay: index * 0.1, // Her harf için gecikmeli animasyon
                 duration: 0.1,      // Animasyon süresi
               }}
-              className="font-bold text-xl text-blue-900"
+              className="font-bold text-xl text-blue-color"
             >
               {letter}
             </motion.span>
