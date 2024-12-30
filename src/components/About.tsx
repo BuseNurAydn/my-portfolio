@@ -7,8 +7,11 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 
 
 const About = () => {
+
+  const containerStyle = "md:container md:mx-auto scroll-mt-16 flex flex-col md:flex-row items-center justify-between ";
+
   return (
-    <section id='about' className='md:container md:mx-auto flex flex-col md:flex-row items-center justify-between relative md:py-32 overflow-auto md:overflow-visible'>
+    <section id='about' className={`${containerStyle} relative md:py-32 py-8 overflow-auto md:overflow-visible`}>
    <motion.div
        className="md:w-3/5 space-y-4 p-6 md:p-0"
         animate={{ opacity: 1 }}

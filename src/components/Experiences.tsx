@@ -6,9 +6,12 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 type Props = {}
 
 const Experiences = (props: Props) => {
+
+  const containerStyle = 'md:container md:mx-auto px-4 md:px-0 scroll-mt-16';
+
   return (
-    <section id="experiences" className="md:container md:mx-auto px-4 md:px-0 my-4">
-      <div className="mt-6">
+    <section id="experiences" className={`${containerStyle}`}>
+      <div className="pt-6">
         <Htext>Experiences</Htext>
         <motion.div
           animate={{ opacity: 1 }}

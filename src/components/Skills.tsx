@@ -72,9 +72,12 @@ const Skills = (props: Props) => {
     ]
   };
 
+  const containerStyle = 'md:container md:mx-auto';
+  const paddingStyle = 'md:p-2 p-4 scroll-mt-16';
+
   return (
-    <section id="skills" className=" md:px-0 px-4 bg-zinc200-color mt-4 ">
-      <div className="mt-6 md:container md:mx-auto">
+    <section id="skills" className={`${paddingStyle} bg-zinc200-color `}>
+      <div className={`${containerStyle} pt-6`}>
         <Htext>Skills</Htext>
         <div className="text-black-color text-center pointer text-xs font-semibold rounded-lg mb-8">
           <Slider {...settings}>

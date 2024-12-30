@@ -5,9 +5,13 @@ import { SlActionRedo } from "react-icons/sl";
 type Props = {}
 
 const Projects = (props: Props) => {
+  
+  const containerStyle = 'md:container md:mx-auto';
+  const paddingStyle = 'px-4 md:px-0 scroll-mt-16';
+
   return (
-    <section id="projects" className="px-4 md:px-0 bg-zinc-color pb-8">
-      <div className="pt-6 md:container md:mx-auto ">
+    <section id="projects" className={`${paddingStyle} bg-zinc-color pb-8`}>
+      <div className={`${containerStyle} pt-6`} >
         <Htext>Projects</Htext>
 
         <div className="">

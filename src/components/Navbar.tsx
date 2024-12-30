@@ -4,7 +4,8 @@ import IconBar from '../assets/icons/IconBar.svg'; //heroicons
 import IconDownload from '../assets/icons/IconDownload.svg';
 
 const Navbar = ({ text }: { text: string }) => {
-  const Link = 'text-lg hover:text-blue-900 transition duration-200 '
+  const Link = 'text-lg hover:text-blue-900 transition duration-200 ';
+  const containerStyle = 'md:container md:mx-auto flex items-center justify-between';
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   const toggleMenu = () => {
@@ -15,7 +16,7 @@ const Navbar = ({ text }: { text: string }) => {
 
   return (
     <nav className="py-4 shadow-xl bg-white sticky top-0 z-20 px-5">
-      <div className='md:container md:mx-auto flex items-center justify-between'>
+      <div className={`${containerStyle}`}>
         <div style={{ display: 'flex' }}>
           {letters.map((letter, index) => (
             <motion.span
