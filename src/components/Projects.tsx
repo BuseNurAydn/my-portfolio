@@ -10,7 +10,7 @@ const Projects = (props: Props) => {
   const paddingStyle = 'px-4 md:px-0 scroll-mt-16';
 
   return (
-    <section id="projects" className={`${paddingStyle} bg-zinc-color pb-8`}>
+    <section id="projects" className={`${paddingStyle} bg-zinc-color pb-8 dark:bg-gray-900`}>
       <div className={`${containerStyle} pt-6`} >
         <Htext>Projects</Htext>
 
@@ -25,8 +25,8 @@ const Projects = (props: Props) => {
 
               <div className="md:w-3/5 flex flex-col space-y-6 relative ">
                 <h2 className="font-semibold text-xl text-brand-color">{project.title}</h2>
-                <p className=" text-gray-color">{project.description}</p>
-                <a href={project.link}  target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 underline underline-offset-4 hover:text-brand-color transistion duration-500 ">
+                <p className=" text-gray-color dark:text-gray-400 ">{project.description}</p>
+                <a href={project.link}  target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 underline underline-offset-4 hover:text-brand-color transistion duration-500 dark:text-cyan-400 ">
                   <span>Github Link</span>
                   <SlActionRedo />
                 </a>

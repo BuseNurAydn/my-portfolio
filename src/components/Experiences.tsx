@@ -7,10 +7,11 @@ type Props = {}
 
 const Experiences = (props: Props) => {
 
-  const containerStyle = 'md:container md:mx-auto px-4 md:px-0 scroll-mt-16';
+  const containerStyle = 'md:container md:mx-auto px-4 md:px-0 ';
 
   return (
-    <section id="experiences" className={`${containerStyle}`}>
+    <section id="experiences" className="dark:bg-gray-800 scroll-mt-16">
+      <div className={`${containerStyle}`}>
       <div className="pt-6">
         <Htext>Experiences</Htext>
         <motion.div
@@ -34,6 +35,7 @@ const Experiences = (props: Props) => {
             ))}
           </div>
         </motion.div>
+      </div>
       </div>
     </section>
   )

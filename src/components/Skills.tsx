@@ -76,7 +76,7 @@ const Skills = (props: Props) => {
   const paddingStyle = 'md:p-2 p-4 scroll-mt-16';
 
   return (
-    <section id="skills" className={`${paddingStyle} bg-zinc200-color `}>
+    <section id="skills" className={`${paddingStyle} bg-zinc200-color dark:bg-gray-900 `}>
       <div className={`${containerStyle} pt-6`}>
         <Htext>Skills</Htext>
         <div className="text-black-color text-center pointer text-xs font-semibold rounded-lg mb-8">

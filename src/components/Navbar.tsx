@@ -1,21 +1,47 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import IconBar from '../assets/icons/IconBar.svg'; //heroicons
-import IconDownload from '../assets/icons/IconDownload.svg';
+import { BiSolidMoon, BiSolidSun  } from 'react-icons/bi';
+
 
 const Navbar = ({ text }: { text: string }) => {
-  const Link = 'text-lg hover:text-blue-900 transition duration-200 ';
+  const Link = 'text-lg hover:text-blue-900 dark:hover:text-teal-400 transition duration-200 ';
   const containerStyle = 'md:container md:mx-auto flex items-center justify-between';
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Local storage'dan tema durumunu 
+  useEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      setIsDarkMode(true);
+      document.documentElement.classList.add('dark');
+    } else {
+      setIsDarkMode(false);
+      document.documentElement.classList.remove('dark');
+    }
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);        // !false = true
   }
-
+  const toggleDarkMode = () => {
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    if (newMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+  
   const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
 
   return (
-    <nav className="py-4 shadow-xl bg-white sticky top-0 z-20 px-5">
+    <nav className="py-4 shadow-xl bg-white sticky top-0 z-20 px-5 overflow-hidden dark:bg-gray-900 dark:text-white">
       <div className={`${containerStyle}`}>
         <div style={{ display: 'flex' }}>
           {letters.map((letter, index) => (
@@ -27,39 +53,42 @@ const Navbar = ({ text }: { text: string }) => {
                 delay: index * 0.1, // Her harf için gecikmeli animasyon
                 duration: 0.1,      // Animasyon süresi
               }}
-              className="font-bold text-xl text-blue-color"
+              className="font-bold text-xl text-cyan-color dark:text-cyan-400"
             >
               {letter}
             </motion.span>
           ))}
         </div>
-        <ul className="md:flex hidden space-x-6">
-          <li><a href="#about" className={`${Link}`}>About</a></li>
-          <li><a href="#skills" className={`${Link}`}>Skills</a></li>
-          <li><a href="#experiences" className={`${Link}`}>Experiences</a></li>
-          <li><a href="#projects" className={`${Link}`}>Projects</a></li>
-        </ul>
-        <div className='md:flex hidden border-2 border-dashed px-2 py-1 rounded-lg'>
-          <img src={IconDownload} className={`${Link} h-5 w-5 mr-2`} />
-          <a href="https://drive.google.com/file/d/1dx4eZtaG2lGLCyFPb0uDxHf_OD67GNTJ/view?usp=drive_link
-                "target="_blank">Download CV</a>
-          </div>
-        <div className='md:hidden'> 
-             <img src={IconBar} alt="Icon Bar" className="h-8 w-8" onClick={toggleMenu} />
+        {/*Desktop Menü */}
+        <div>
+          <ul className="md:flex hidden space-x-6">
+            <li><a href="#about" className={`${Link}`}>About</a></li>
+            <li><a href="#skills" className={`${Link}`}>Skills</a></li>
+            <li><a href="#experiences" className={`${Link}`}>Experiences</a></li>
+            <li><a href="#projects" className={`${Link}`}>Projects</a></li>
+          </ul>
+        </div>
+       
+        {/* Dark Mode ve Mobil Menü */}
+        <div className="flex items-center gap-4">
+          <button onClick={toggleDarkMode} className="text-2xl cursor-pointer">
+            {isDarkMode ? <BiSolidSun /> : <BiSolidMoon />}
+          </button>
+          <img src={IconBar} alt="Icon Bar" className="h-8 w-8 cursor-pointer md:hidden" onClick={toggleMenu} />
         </div>
       </div>
-      {/*Mobile menü */}
-      {isMenuOpen ? (
-          <ul className="flex-col md:hidden space-y-4 mt-4">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experiences">Experiences</a></li>
-            <li><a href="#projects">Projects</a></li>
-          </ul>
-      ):null}
-    </nav>
-    
 
+       {/*Mobile menü */}
+       {isMenuOpen ? (
+            <ul className="flex-col md:hidden space-y-4 mt-4">
+              <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#experiences">Experiences</a></li>
+              <li><a href="#projects">Projects</a></li>
+            </ul>
+          ) : null}
+
+    </nav>
   )
 }
 
