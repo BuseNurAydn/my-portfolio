@@ -7,10 +7,10 @@ type Props = {}
 
 const Experiences = (props: Props) => {
 
-  const containerStyle = 'md:container md:mx-auto px-4 md:px-0 ';
+  const containerStyle = 'xl:container xl:mx-auto px-4 md:px-6 lg:px-2 ';
 
   return (
-    <section id="experiences" className="dark:bg-gray-800 scroll-mt-16">
+    <section id="experiences" className="dark:bg-gray800-color scroll-mt-14">
       <div className={`${containerStyle}`}>
       <div className="pt-6">
         <Htext>Experiences</Htext>
@@ -25,7 +25,7 @@ const Experiences = (props: Props) => {
             visible: { opacity: 1, y: 0 }, // Yukarıya doğru hareket ediyor
           }}
         >
-          <div className="grid md:grid-cols-2 text-center gap-x-8">
+          <div className="grid md:grid-cols-2 text-center gap-x-8 ">
             {experiences.map((experience, index) => (
               <div key={index} className="p-6 bg-slate-color rounded-lg cursor-pointer font-semibold mb-8 shadow-lg hover:shadow-xl duration-500 transition-transform hover:scale-90 hover:-translate-y-1">
                 <h2 className="text-second-color">{experience.title}</h2>

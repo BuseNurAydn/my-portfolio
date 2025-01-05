@@ -1,17 +1,17 @@
 import Htext from "../shared/Htext";
 import { projects } from "../utils/projectsData";
-import { SlActionRedo } from "react-icons/sl";
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 type Props = {}
 
 const Projects = (props: Props) => {
   
-  const containerStyle = 'md:container md:mx-auto';
-  const paddingStyle = 'px-4 md:px-0 scroll-mt-16';
+  const containerStyle = 'xl:container xl:mx-auto';
+  
 
   return (
-    <section id="projects" className={`${paddingStyle} bg-zinc-color pb-8 dark:bg-gray-900`}>
-      <div className={`${containerStyle} pt-6`} >
+    <section id="projects" className=' bg-zinc-color pb-8 dark:bg-gray900-color scroll-mt-14'>
+      <div className={`${containerStyle} px-6 md:px-8 lg:px-4 pt-6 `} >
         <Htext>Projects</Htext>
 
         <div className="">
@@ -25,10 +25,10 @@ const Projects = (props: Props) => {
 
               <div className="md:w-3/5 flex flex-col space-y-6 relative ">
                 <h2 className="font-semibold text-xl text-brand-color">{project.title}</h2>
-                <p className=" text-gray-color dark:text-gray-400 ">{project.description}</p>
-                <a href={project.link}  target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 underline underline-offset-4 hover:text-brand-color transistion duration-500 dark:text-cyan-400 ">
+                <p className=" text-gray-color dark:text-gray400-color ">{project.description}</p>
+                <a href={project.link}  target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 hover:text-brand-color transistion duration-500 dark:text-cyan400-color ">
                   <span>Github Link</span>
-                  <SlActionRedo />
+                  <HiOutlineArrowRight />
                 </a>
               </div>
             </div>

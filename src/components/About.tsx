@@ -2,20 +2,19 @@ import Button from '../shared/Button'
 import CvButton from '../shared/CvButton'
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
-import profil from '../assets/images/png/profilFoto.png'
+import profil from '../assets/images/png/profil.png'
 import { motion } from 'framer-motion' //animasyon için //framer animation
-
-
+import { GoDownload } from "react-icons/go";
 
 const About = () => {
- 
-  const containerStyle = "md:container md:mx-auto  flex flex-col md:flex-row items-center justify-between md:py-32 py-8 ";
+
+  const containerStyle = "xl:container xl:mx-auto flex flex-col md:flex-row items-center justify-between";
 
   return (
-    <section id='about' className='dark:bg-gray-800 scroll-mt-16'>
+    <section id='about' className='dark:bg-gray800-color scroll-mt-16'>
       <div className={`${containerStyle} relative overflow-auto md:overflow-visible`}>
         <motion.div
-          className="md:w-3/5 space-y-4 p-6 md:p-0"
+          className="md:w-2/3 space-y-4 p-6 md:p-4 lg:p-2"
           animate={{ opacity: 1 }}
           initial="hidden"
           whileInView="visible"
@@ -27,25 +26,27 @@ const About = () => {
           }}
         >
 
-          <h2 className='font-semibold text-xl text-brand-color dark:text-teal-400 animate-bounce'>Frontend Developer</h2>
-          <h1 className="font-bold text-3xl text-cyan-color dark:text-cyan-500 ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
-          <p className='dark:text-gray-400'>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
-          <div className="flex md:gap-x-8 gap-x-4">
+          <h2 className='font-semibold text-xl text-brand-color dark:text-white animate-bounce'>Frontend Developer</h2>
+          <h1 className="font-bold lg:text-3xl md:text-lg text-xl text-cyan-color dark:text-cyan500-color ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
+          <p className='dark:text-gray400-color md:text-sm lg:text-base'>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
+          <div className="flex md:gap-x-8 gap-x-2">
             <Button href="https://www.linkedin.com/in/buse-nur-ayd%C4%B1n-a18967227/"><FaLinkedin /></Button>
             <Button href="https://github.com/BuseNurAydn"><FaGithub /></Button>
-            <Button href="mailto:busenuraydin521@gmail.com"><SiGmail /></Button> 
-            <CvButton href="https://drive.google.com/file/d/1dx4eZtaG2lGLCyFPb0uDxHf_OD67GNTJ/view?usp=drive_link">Download CV</CvButton>   
+            <Button href="mailto:busenuraydin521@gmail.com"><SiGmail /></Button>
+            <CvButton href="https://drive.google.com/file/d/1dx4eZtaG2lGLCyFPb0uDxHf_OD67GNTJ/view?usp=drive_link">
+              Download CV
+              <GoDownload />
+            </CvButton>
           </div>
         </motion.div>
-        
-        <div className="md:w-2/5 flex items-center justify-center relative h-full">
+
+        <div className="md:w-1/3 w-96 flex items-center animate-pulse cursor-pointer justify-center relative bg-gradient-to-r hover:bg-gradient-to-l from-sky-color to-cyan500-color">
 
           {/* Profil Resmi */}
-          <div className="z-10 md:bg-gray-color md:dark:bg-gray-700 md:p-20 ">
+          <div className="z-10">
             <img
               src={profil}
-              alt="Profile"
-              className="relative"
+              alt="profil"
             />
           </div>
         </div>

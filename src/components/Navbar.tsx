@@ -5,8 +5,8 @@ import { BiSolidMoon, BiSolidSun  } from 'react-icons/bi';
 
 
 const Navbar = ({ text }: { text: string }) => {
-  const Link = 'text-lg hover:text-blue-900 dark:hover:text-teal-400 transition duration-200 ';
-  const containerStyle = 'md:container md:mx-auto flex items-center justify-between';
+  const Link = 'text-lg hover:text-blue-color dark:hover:text-cyan500-color transition duration-200 ';
+  const containerStyle = 'xl:container xl:mx-auto flex items-center justify-between';
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -41,7 +41,7 @@ const Navbar = ({ text }: { text: string }) => {
   const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
 
   return (
-    <nav className="py-4 shadow-xl bg-white sticky top-0 z-20 px-5 overflow-hidden dark:bg-gray-900 dark:text-white">
+    <nav className="py-6 shadow-xl bg-white sticky top-0 z-20 px-6 md:px-4 dark:bg-gray900-color dark:text-white">
       <div className={`${containerStyle}`}>
         <div style={{ display: 'flex' }}>
           {letters.map((letter, index) => (
@@ -53,7 +53,7 @@ const Navbar = ({ text }: { text: string }) => {
                 delay: index * 0.1, // Her harf için gecikmeli animasyon
                 duration: 0.1,      // Animasyon süresi
               }}
-              className="font-bold text-xl text-cyan-color dark:text-cyan-400"
+              className="font-bold text-xl text-cyan-color dark:text-cyan400-color"
             >
               {letter}
             </motion.span>
@@ -74,7 +74,7 @@ const Navbar = ({ text }: { text: string }) => {
           <button onClick={toggleDarkMode} className="text-2xl cursor-pointer">
             {isDarkMode ? <BiSolidSun /> : <BiSolidMoon />}
           </button>
-          <img src={IconBar} alt="Icon Bar" className="h-8 w-8 cursor-pointer md:hidden" onClick={toggleMenu} />
+          <img src={IconBar} alt="Icon Bar" className="h-6 w-6 cursor-pointer md:hidden dark:bg-white" onClick={toggleMenu} />
         </div>
       </div>
 
