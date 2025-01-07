@@ -26,7 +26,7 @@ const About = () => {
           }}
         >
 
-          <h2 className='font-semibold text-xl text-brand-color dark:text-white animate-bounce'>Frontend Developer</h2>
+          <h2 className='font-semibold text-xl text-brand-color dark:text-white animate-bounce tracking-wider'>Frontend Developer</h2>
           <h1 className="font-bold lg:text-3xl md:text-lg text-xl text-cyan-color dark:text-cyan500-color ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
           <p className='dark:text-gray400-color md:text-sm lg:text-base'>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
           <div className="flex md:gap-x-8 gap-x-2">
@@ -35,7 +35,7 @@ const About = () => {
             <Button href="mailto:busenuraydin521@gmail.com"><SiGmail /></Button>
             <CvButton href="https://drive.google.com/file/d/1dx4eZtaG2lGLCyFPb0uDxHf_OD67GNTJ/view?usp=drive_link">
               Download CV
-              <GoDownload />
+              <GoDownload className='w-6 h-6' />
             </CvButton>
           </div>
         </motion.div>

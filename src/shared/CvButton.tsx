@@ -8,7 +8,7 @@ type Props = {
 
 };
 const CvButton = ({ children, href, onClick, className = '' }: Props) => {
-    const baseClasses ='text-sky-color flex items-center gap-x-2 rounded-lg px-3 py-1 md:text-lg text-sm mr-2 mt-4 cursor-pointer border border-dashed border-sky-color transistion duration-500 ease-in-out hover:bg-darkSky-color hover:border-none hover:text-white bg-transparent hover:border-shadow-2xl';
+    const baseClasses ='text-darkSky-color flex items-center gap-x-2 rounded-lg px-3 py-1 md:text-lg text-sm mr-2 mt-4 cursor-pointer  transistion duration-500 ease-in-out hover:bg-sky-color border border-darkSky-color hover:border-none hover:text-white bg-transparent hover:border-shadow-2xl tracking-wide';
   
     if (href) {
       return (

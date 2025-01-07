@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion'
 import IconBar from '../assets/icons/IconBar.svg'; //heroicons
-import { BiSolidMoon, BiSolidSun  } from 'react-icons/bi';
-
+import { BiSolidMoon, BiSolidSun } from 'react-icons/bi';
+import { TfiClose } from "react-icons/tfi";
 
 const Navbar = ({ text }: { text: string }) => {
   const Link = 'text-lg hover:text-blue-color dark:hover:text-cyan500-color transition duration-200 ';
@@ -37,7 +37,7 @@ const Navbar = ({ text }: { text: string }) => {
       localStorage.setItem('theme', 'light');
     }
   };
-  
+
   const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
 
   return (
@@ -68,25 +68,35 @@ const Navbar = ({ text }: { text: string }) => {
             <li><a href="#projects" className={`${Link}`}>Projects</a></li>
           </ul>
         </div>
-       
+
         {/* Dark Mode ve Mobil Menü */}
         <div className="flex items-center gap-4">
           <button onClick={toggleDarkMode} className="text-2xl cursor-pointer">
             {isDarkMode ? <BiSolidSun /> : <BiSolidMoon />}
           </button>
-          <img src={IconBar} alt="Icon Bar" className="h-6 w-6 cursor-pointer md:hidden dark:bg-white" onClick={toggleMenu} />
+          {isMenuOpen ? (
+            <button onClick={toggleMenu} className="text-2xl cursor-pointer md:hidden dark:bg-white dark:rounded-full dark:p-1">
+              <TfiClose className='dark:text-black w-6 h-6 dark:p-1' /> 
+            </button>
+          ) : (
+            <img
+              src={IconBar}
+              alt="Icon Bar"
+              className="h-8 w-8 cursor-pointer md:hidden dark:bg-white dark:rounded-full dark:p-1"
+              onClick={toggleMenu}
+            />
+          )}
         </div>
       </div>
-
-       {/*Mobile menü */}
-       {isMenuOpen ? (
-            <ul className="flex-col md:hidden space-y-4 mt-4">
-              <li><a href="#about">About</a></li>
-              <li><a href="#skills">Skills</a></li>
-              <li><a href="#experiences">Experiences</a></li>
-              <li><a href="#projects">Projects</a></li>
-            </ul>
-          ) : null}
+        {/*Mobile menü */}
+        {isMenuOpen ? (
+          <ul className="flex-col md:hidden space-y-4 mt-4">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experiences">Experiences</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        ) : null}
 
     </nav>
   )
