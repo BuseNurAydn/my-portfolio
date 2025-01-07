@@ -7,7 +7,7 @@ import { motion } from 'framer-motion' //animasyon için //framer animation
 
 const Experiences = () => {
 
-  const containerStyle = 'xl:container xl:mx-auto px-4 md:px-6 lg:px-2 ';
+  const containerStyle = 'xl:container xl:mx-auto px-4 md:px-6 lg:px-0 ';
 
   return (
     <section id="experiences" className="dark:bg-gray800-color scroll-mt-14">

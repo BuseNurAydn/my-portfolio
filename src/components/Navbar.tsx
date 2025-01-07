@@ -41,7 +41,7 @@ const Navbar = ({ text }: { text: string }) => {
   const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
 
   return (
-    <nav className="py-6 shadow-xl bg-white sticky top-0 z-20 px-6 md:px-4 dark:bg-gray900-color dark:text-white">
+    <nav className="py-6 shadow-xl bg-white sticky top-0 z-20 px-4 dark:bg-gray900-color dark:text-white">
       <div className={`${containerStyle}`}>
         <div style={{ display: 'flex' }}>
           {letters.map((letter, index) => (
