@@ -26,7 +26,7 @@ const About = () => {
           }}
         >
 
-          <h2 className='font-semibold text-xl text-brand-color dark:text-white animate-bounce tracking-wider'>Frontend Developer</h2>
+          <h2 className='font-semibold text-xl text-brand-color dark:text-white animate-bounce tracking-wider pt-6'>Frontend Developer</h2>
           <h1 className="font-bold lg:text-3xl md:text-lg text-xl text-cyan-color dark:text-cyan500-color ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
           <p className='dark:text-gray400-color md:text-sm lg:text-base'>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
           <div className="flex md:gap-x-8 gap-x-2">
