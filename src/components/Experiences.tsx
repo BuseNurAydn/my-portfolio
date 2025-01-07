@@ -3,9 +3,9 @@ import Htext from "../shared/Htext";
 import { experiences } from "../utils/experienceData"
 import { motion } from 'framer-motion' //animasyon için //framer animation
 
-type Props = {}
 
-const Experiences = (props: Props) => {
+
+const Experiences = () => {
 
   const containerStyle = 'xl:container xl:mx-auto px-4 md:px-6 lg:px-2 ';
 

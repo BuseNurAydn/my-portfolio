@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Htext from '../shared/Htext';
 
-type Props = {}
 
 function Arrow(props:any) {
   const { className, style, onClick } = props;
@@ -17,7 +16,7 @@ function Arrow(props:any) {
   );
 }
 
-const Skills = (props: Props) => {
+const Skills = () => {
   var settings = {
     dots: false,
     infinite: true,

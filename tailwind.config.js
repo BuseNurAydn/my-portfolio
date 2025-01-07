@@ -32,9 +32,6 @@ export default {
         primary: ['var(--font-primary)'],
         secondary: ['var(--font-secondary)'],
       },
-      backgroundImage: {
-        //aboutImage: "url('./src/assets/images/svg/Bg.svg')",
-      },
     },
   },
   plugins: [],

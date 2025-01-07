@@ -2,9 +2,9 @@ import Button from '../shared/Button'
 import { FaLinkedin, FaGithub } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
-type Props = {}
 
-const Footer = (props: Props) => {
+
+const Footer = () => {
 
   return (
     <footer className="bg-darkCyan-color dark:bg-gray800-color md:text-lg text-sm py-6">

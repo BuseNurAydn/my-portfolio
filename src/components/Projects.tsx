@@ -2,9 +2,9 @@ import Htext from "../shared/Htext";
 import { projects } from "../utils/projectsData";
 import { HiOutlineArrowRight } from "react-icons/hi";
 
-type Props = {}
 
-const Projects = (props: Props) => {
+
+const Projects = () => {
   
   const containerStyle = 'xl:container xl:mx-auto';
   
