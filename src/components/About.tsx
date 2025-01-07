@@ -14,7 +14,7 @@ const About = () => {
     <section id='about' className='dark:bg-gray800-color scroll-mt-16'>
       <div className={`${containerStyle} relative overflow-auto md:overflow-visible`}>
         <motion.div
-          className="md:w-2/3 space-y-4 p-4 lg:p-0"
+          className="md:w-2/3 space-y-4 p-6 lg:p-0"
           animate={{ opacity: 1 }}
           initial="hidden"
           whileInView="visible"
@@ -40,7 +40,7 @@ const About = () => {
           </div>
         </motion.div>
 
-        <div className="md:w-1/3 w-80 flex items-center animate-pulse cursor-pointer justify-center relative bg-gradient-to-r hover:bg-gradient-to-l from-sky-color to-cyan500-color">
+        <div className="md:w-1/3 w-96 flex items-center animate-pulse cursor-pointer justify-center relative bg-gradient-to-r hover:bg-gradient-to-l from-sky-color to-cyan500-color">
 
           {/* Profil Resmi */}
           <div className="z-10">
