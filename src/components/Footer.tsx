@@ -14,7 +14,7 @@ const Footer = () => {
         <Button href="mailto:busenuraydin521@gmail.com"><SiGmail /></Button>
       </div>
       {/* Copyright Section */}
-      <div className="text-center text-sm text-black-color">
+      <div className="text-center text-sm 2xl:text-xl text-black-color">
         &copy; {new Date().getFullYear()} by Buse Nur Aydın.
       </div>
     </footer>

@@ -78,15 +78,15 @@ const Skills = () => {
     <section id="skills" className={`${paddingStyle} bg-zinc200-color dark:bg-gray900-color `}>
       <div className={`${containerStyle} pt-6`}>
         <Htext>Skills</Htext>
-        <div className="text-black-color text-center pointer text-xs font-semibold rounded-lg mb-8">
+        <div className="text-black-color text-center pointer text-xs xl:text-sm 2xl:text-lg font-semibold rounded-lg mb-8">
           <Slider {...settings}>
             {skills.map((skill, index) => (
               <div key={index} className="p-6 bg-white rounded-lg cursor-pointer">
                 <div>
                   <img src={skill.image} alt='' className='h-16 w-16 text-center flex mx-auto'></img>
                 </div>
-                <div className='flex flex-col text-blue-color font-bold justify-center items-center gap-y-2 p-2'>
-                  <h3 className='rounded-b-lg'>{skill.title}</h3>
+                <div className='flex flex-col text-blue-color  justify-center items-center gap-y-2 p-2'>
+                  <h3 className='rounded-b-lg '>{skill.title}</h3>
                 </div>
               </div>
             ))}

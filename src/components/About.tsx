@@ -26,9 +26,9 @@ const About = () => {
           }}
         >
 
-          <h2 className='font-semibold text-xl text-brand-color dark:text-white animate-bounce tracking-wider pt-6'>Frontend Developer</h2>
+          <h2 className='font-semibold text-xl 2xl:text-2xl text-brand-color dark:text-white animate-bounce tracking-wider pt-6'>Frontend Developer</h2>
           <h1 className="font-bold lg:text-3xl md:text-lg text-xl text-cyan-color dark:text-cyan500-color ">Hello, my name is Buse Nur Aydın. I am a Computer Engineer.</h1>
-          <p className='dark:text-gray400-color md:text-sm lg:text-base'>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
+          <p className='dark:text-gray400-color md:text-sm lg:text-base xl:text-base 2xl:text-xl'>I just graduated from Çankırı Karatekin University, Department of Computer Engineering. I am a frontend developer who tries to maximize user experience and produce modern designs and scalable software solutions. I love learning new technologies and applying these technologies in my projects. I continue to improve myself by following innovations in the software world. I want to contribute by developing high-performance and scalable projects.</p>
           <div className="flex md:gap-x-8 gap-x-2">
             <Button href="https://www.linkedin.com/in/buse-nur-ayd%C4%B1n-a18967227/"><FaLinkedin /></Button>
             <Button href="https://github.com/BuseNurAydn"><FaGithub /></Button>
@@ -40,10 +40,10 @@ const About = () => {
           </div>
         </motion.div>
 
-        <div className="md:w-1/3 w-96 flex items-center animate-pulse cursor-pointer justify-center relative bg-gradient-to-r hover:bg-gradient-to-l from-sky-color to-cyan500-color">
+        <div className="md:w-1/3 w-full max-w-md flex items-center animate-pulse cursor-pointer justify-center relative bg-gradient-to-r hover:bg-gradient-to-l from-sky-color to-cyan500-color">
 
           {/* Profil Resmi */}
-          <div className="z-10">
+          <div className="z-10 w-full max-w-[250px] md:max-w-none">
             <img
               src={profil}
               alt="profil"

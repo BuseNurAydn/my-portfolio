@@ -28,9 +28,9 @@ const Experiences = () => {
           <div className="grid md:grid-cols-2 text-center gap-x-8 ">
             {experiences.map((experience, index) => (
               <div key={index} className="p-6 bg-slate-color rounded-lg cursor-pointer font-semibold mb-8 shadow-lg hover:shadow-xl duration-500 transition-transform hover:scale-90 hover:-translate-y-1">
-                <h2 className="text-second-color">{experience.title}</h2>
-                <p className="text-sm text-sky-color">{experience.company} | {experience.date}</p>
-                <p className="text-sm text-gray-color">{experience.description}</p>
+                <h2 className="text-second-color 2xl:text-xl">{experience.title}</h2>
+                <p className="text-sm xl:text-base 2xl:text-lg text-sky-color">{experience.company} | {experience.date}</p>
+                <p className="text-sm 2xl:text-base text-gray-color">{experience.description}</p>
               </div>
             ))}
           </div>

@@ -24,10 +24,10 @@ const Projects = () => {
               </div>
 
               <div className="md:w-3/5 flex flex-col space-y-6 relative ">
-                <h2 className="font-semibold text-xl text-brand-color">{project.title}</h2>
-                <p className=" text-gray-color dark:text-gray400-color ">{project.description}</p>
+                <h2 className="font-semibold text-xl xl:text-xl 2xl:text-2xl text-brand-color">{project.title}</h2>
+                <p className=" text-gray-color dark:text-gray400-color text-base xl:text-lg 2xl:text-xl ">{project.description}</p>
                 <a href={project.link}  target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 hover:text-brand-color transistion duration-500 dark:text-cyan400-color ">
-                  <span>Github Link</span>
+                  <span className="text-base xl:text-base 2xl:text-xl ">Github Link</span>
                   <HiOutlineArrowRight />
                 </a>
               </div>
