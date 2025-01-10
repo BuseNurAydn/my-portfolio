@@ -22,14 +22,16 @@ const Experiences = () => {
         <motion.div
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            transition={{ staggerChildren: 0.3 }} // divler arasında gecikme
             className="grid md:grid-cols-2 text-center gap-x-8"
           >
             {experiences.map((experience, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
+                initial="hidden" 
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.4 }}
                 className="p-6 bg-slate-color rounded-lg cursor-pointer font-semibold mb-8 shadow-lg hover:shadow-xl duration-300 "
               >
                 <h2 className="text-second-color 2xl:text-xl">{experience.title}</h2>
