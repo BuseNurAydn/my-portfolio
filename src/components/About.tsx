@@ -33,7 +33,7 @@ const About = () => {
             <Button href="https://www.linkedin.com/in/buse-nur-ayd%C4%B1n-a18967227/"><FaLinkedin /></Button>
             <Button href="https://github.com/BuseNurAydn"><FaGithub /></Button>
             <Button href="mailto:busenuraydin521@gmail.com"><SiGmail /></Button>
-            <CvButton href="https://drive.google.com/file/d/1i1u3oLe9PywTR9OaHYRSURLPqetrxx5S/view?usp=sharing">
+            <CvButton href="https://drive.google.com/file/d/1hJRgcov47wwmX2SDEjbYx_x7JRufH_TJ/view?usp=drive_link">
               Download CV
               <GoDownload className='w-6 h-6' />
             </CvButton>
