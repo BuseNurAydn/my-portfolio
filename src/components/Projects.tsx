@@ -11,7 +11,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className=' bg-zinc-color pb-8 dark:bg-gray900-color scroll-mt-14'>
-      <div className={`${containerStyle} px-6 md:px-8 lg:px-0 pt-6 `} >
+      <div className={`${containerStyle} px-4 md:px-8 lg:px-0 pt-6 `} >
         <Htext>Projects</Htext>
 
         <div className="">

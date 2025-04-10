@@ -3,9 +3,10 @@ import { motion } from 'framer-motion'
 import IconBar from '../assets/icons/IconBar.svg'; //heroicons
 import { BiSolidMoon, BiSolidSun } from 'react-icons/bi';
 import { TfiClose } from "react-icons/tfi";
+import { Link as ScrollLink } from 'react-scroll';
 
 const Navbar = ({ text }: { text: string }) => {
-  const Link = 'text-lg hover:text-blue-color dark:hover:text-cyan500-color transition duration-200 ';
+  const Link = 'text-lg hover:text-blue-color dark:hover:text-cyan500-color transition duration-200 cursor-pointer ';
   const containerStyle = 'xl:container xl:mx-auto flex items-center justify-between';
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,6 +39,13 @@ const Navbar = ({ text }: { text: string }) => {
     }
   };
 
+  const menuItems = [
+    { id: 'about', label: 'About' },
+    { id: 'skills', label: 'Skills' },
+    { id: 'experiences', label: 'Experiences' },
+    { id: 'projects', label: 'Projects' }
+  ];
+
   const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
 
   return (
@@ -62,10 +70,20 @@ const Navbar = ({ text }: { text: string }) => {
         {/*Desktop Menü */}
         <div>
           <ul className="md:flex hidden space-x-6">
-            <li><a href="#about" className={`${Link}`}>About</a></li>
-            <li><a href="#skills" className={`${Link}`}>Skills</a></li>
-            <li><a href="#experiences" className={`${Link}`}>Experiences</a></li>
-            <li><a href="#projects" className={`${Link}`}>Projects</a></li>
+            {menuItems.map(item => (
+              <li key={item.id}>
+                <ScrollLink
+                  to={item.id}
+                  smooth={true}
+                  duration={500}
+                  offset={-60}
+                  className={Link}
+                  spy={true}
+                >
+                  {item.label}
+                </ScrollLink>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -76,7 +94,7 @@ const Navbar = ({ text }: { text: string }) => {
           </button>
           {isMenuOpen ? (
             <button onClick={toggleMenu} className="text-2xl cursor-pointer md:hidden dark:bg-white dark:rounded-full dark:p-1">
-              <TfiClose className='dark:text-black w-6 h-6 dark:p-1' /> 
+              <TfiClose className='dark:text-black w-6 h-6 dark:p-1' />
             </button>
           ) : (
             <img
@@ -88,15 +106,24 @@ const Navbar = ({ text }: { text: string }) => {
           )}
         </div>
       </div>
-        {/*Mobile menü */}
-        {isMenuOpen ? (
-          <ul className="flex-col md:hidden space-y-4 mt-4">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experiences">Experiences</a></li>
-            <li><a href="#projects">Projects</a></li>
-          </ul>
-        ) : null}
+      {/*Mobile menü */}
+      {isMenuOpen ? (
+       <ul className="flex-col md:hidden space-y-4 mt-4">
+       {menuItems.map(item => (
+         <li key={item.id}>
+           <ScrollLink
+             to={item.id}
+             smooth={true}
+             duration={500}
+             offset={-60}
+             spy={true}
+           >
+             {item.label}
+           </ScrollLink>
+         </li>
+       ))}
+     </ul>
+      ) : null}
 
     </nav>
   )
