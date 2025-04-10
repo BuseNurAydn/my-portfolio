@@ -15,7 +15,7 @@ const Experiences = () => {
   };
 
   return (
-    <section id="experiences" className="dark:bg-gray800-color scroll-mt-14">
+    <section id="experiences" className="dark:bg-gray800-color">
       <div className={`${containerStyle}`}>
       <div className="pt-6">
         <Htext>Experiences</Htext>

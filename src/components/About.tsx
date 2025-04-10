@@ -11,7 +11,7 @@ const About = () => {
   const containerStyle = "xl:container xl:mx-auto flex flex-col md:flex-row items-center justify-between";
 
   return (
-    <section id='about' className='dark:bg-gray800-color scroll-mt-16'>
+    <section id='about' className='dark:bg-gray800-color'>
       <div className={`${containerStyle} relative overflow-auto md:overflow-visible`}>
         <motion.div
           className="md:w-2/3 space-y-4 p-4 lg:p-0"

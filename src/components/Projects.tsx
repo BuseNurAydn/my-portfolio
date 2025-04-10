@@ -1,4 +1,3 @@
-import Htext from "../shared/Htext";
 import { projects } from "../utils/projectsData";
 import { HiOutlineArrowRight } from "react-icons/hi";
 
@@ -10,13 +9,13 @@ const Projects = () => {
   
 
   return (
-    <section id="projects" className=' bg-zinc-color pb-8 dark:bg-gray900-color scroll-mt-14'>
-      <div className={`${containerStyle} px-4 md:px-8 lg:px-0 pt-6 `} >
-        <Htext>Projects</Htext>
+    <section id="projects" className=' bg-zinc-color pb-8 dark:bg-gray900-color'>
+      <div className={`${containerStyle} px-5 md:px-8 lg:px-0 pt-6 `} >
+        <h1 className='italic uppercase font-semibold text-xl text-cyan-color dark:text-cyan600-color'>Projects</h1>
 
-        <div className="">
+        <div>
           {projects.map((project, index) => (
-            <div key={index} className="flex flex-col md:flex-row py-4 gap-6 items-center border-b border-graytwo-color last:border-none">
+            <div key={index} className="flex flex-col md:flex-row items-center py-4 gap-6 border-b border-graytwo-color last:border-none">
               <div className="md:w-2/5">
               <a href={project.image} target="_blank" rel="noopener noreferrer">
                 <img src={project.image} alt="" className="rounded-lg shadow-xl transition-transform duration-300 hover:scale-105 ease-in  cursor-pointer" />

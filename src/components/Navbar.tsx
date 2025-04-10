@@ -115,8 +115,10 @@ const Navbar = ({ text }: { text: string }) => {
              to={item.id}
              smooth={true}
              duration={500}
-             offset={-60}
+             offset={-240}
              spy={true}
+             onClick={() => setIsMenuOpen(false)}
+             className={Link}
            >
              {item.label}
            </ScrollLink>

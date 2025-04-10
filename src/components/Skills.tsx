@@ -72,7 +72,7 @@ const Skills = () => {
   };
 
   const containerStyle = 'xl:container xl:mx-auto';
-  const paddingStyle = 'lg:p-2 p-3 scroll-mt-14';
+  const paddingStyle = 'lg:p-2 p-3';
 
   return (
     <section id="skills" className={`${paddingStyle} bg-zinc200-color dark:bg-gray900-color `}>
