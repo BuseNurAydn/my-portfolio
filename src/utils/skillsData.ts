@@ -2,6 +2,7 @@ import htmlLogo from "../assets/images/png/htmlLogo.png";
 import cssLogo from "../assets/images/png/cssLogo.png";
 import jsLogo from "../assets/images/png/jsLogo.png";
 import reactLogo from "../assets/images/png/reactLogo.png";
+import nextLogo from "../assets/images/png/nextLogo.png";
 import typescriptLogo from "../assets/images/png/typescriptLogo.png";
 import tailwindLogo from "../assets/images/png/tailwindLogo.png";
 import scssLogo from "../assets/images/png/scssLogo.png";
@@ -28,6 +29,10 @@ export const skills = [
      {
         image: reactLogo,
         title: "React"
+     },
+      {
+        image: nextLogo,
+        title: "Next.js"
      },
      {
         image: typescriptLogo,

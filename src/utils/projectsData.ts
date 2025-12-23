@@ -3,7 +3,15 @@ import getir from '../assets/images/png/getirgörsel2.png'
 import panel from '../assets/images/png/adminPanel-5.png'
 import project from '../assets/images/png/fimple-frontend.png'
 import project2 from '../assets/images/png/Mobven-frontend.png'
+import sanayice from '../assets/images/png/sanayice.png'
 export const projects = [
+     {
+        image: sanayice,
+        title: "Sanayice – E-Commerce Platform",
+        description: "A user-centric e-commerce platform developed with React.js and Redux Toolkit. Development is ongoing. Tailwind CSS was used for styling. The project is currently being refactored with Next.js and TypeScript for SEO, performance, and type-safety advantages.",
+        link:"https://github.com/BuseNurAydn/sanayice-frontend"
+       
+    },
     {
         image: fitness,
         title: "Fitness Themed Landing Page",

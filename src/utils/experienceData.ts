@@ -3,7 +3,7 @@ export const experiences = [
         title: "Full Stack Developer Intern",
         company: "Fimple Bilişim Sistemleri A.Ş.",
         date: "07.2024 - 09.2024",
-        description: "React.js, Material UI, RESTful API, ASP .NET Core, Entity Framework Core, MSSQL, Postman I had the opportunity to improve myself. I developed a project using these technologies. I completed my internship successfully."
+        description: "React.js, Material UI, ASP .NET Core, Entity Framework Core, MSSQL, Postman I had the opportunity to improve myself. I developed a project using these technologies. I completed my internship successfully."
     },
     {
         title: "Frontend Developer Intern",

@@ -1,43 +1,62 @@
 import { projects } from "../utils/projectsData";
 import { HiOutlineArrowRight } from "react-icons/hi";
-
-
+import { motion } from "framer-motion";
+import Htext from '../shared/Htext';
 
 const Projects = () => {
-  
-  const containerStyle = 'xl:container xl:mx-auto';
-  
+  const containerStyle = 'xl:container xl:mx-auto px-4 md:px-0 py-12';
 
   return (
-    <section id="projects" className=' bg-zinc-color pb-8 dark:bg-gray900-color'>
-      <div className={`${containerStyle} px-5 md:px-8 lg:px-0 pt-6 `} >
-        <h1 className='italic uppercase font-semibold text-xl text-cyan-color dark:text-cyan600-color'>Projects</h1>
+    <section id="projects" className='bg-zinc-50 dark:bg-gray900-color transition-colors duration-500'>
+      <div className={`${containerStyle}`}>
+        <div className="flex flex-col items-center mb-12">
+          <Htext>Projects</Htext>
+          <div className="h-1 w-16 bg-cyan-500 rounded-full"></div>
+        </div>
 
-        <div>
-          {projects.map((project, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center py-4 gap-6 border-b border-graytwo-color last:border-none">
-              <div className="md:w-2/5">
-              <a href={project.image} target="_blank" rel="noopener noreferrer">
-                <img src={project.image} alt="" className="rounded-lg shadow-xl transition-transform duration-300 hover:scale-105 ease-in  cursor-pointer" />
-                </a>
-              </div>
+      {/* Proje Kartları */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <motion.div
+            key={index}
+            whileHover={{ y: -10 }}
+            className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-2xl transition-all duration-300 group"
+          >
+            <div className="relative overflow-hidden">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover transition-transform duration-500 "
+              />
+              <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300"></div>
+            </div>
 
-              <div className="md:w-3/5 flex flex-col space-y-6 relative ">
-                <h2 className="font-semibold text-xl xl:text-xl 2xl:text-2xl text-brand-color">{project.title}</h2>
-                <p className=" text-gray-color dark:text-gray400-color text-base xl:text-lg 2xl:text-xl ">{project.description}</p>
-                <a href={project.link}  target="_blank" rel="noopener noreferrer" className="flex items-center space-x-1 hover:text-brand-color transistion duration-500 dark:text-cyan400-color ">
-                  <span className="text-base xl:text-base 2xl:text-xl ">Github Link</span>
-                  <HiOutlineArrowRight />
+            {/* Proje Bilgileri */}
+            <div className="p-6 space-y-4">
+              <h3 className="font-bold text-lg text-slate-700 dark:text-white group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors">
+                {project.title}
+              </h3>
+
+              <p className="text-slate-600 dark:text-gray-400 text-sm ">
+                {project.description}
+              </p>
+
+              <div className="pt-2">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-bold text-cyan-600 dark:text-cyan-500 hover:gap-4 transition-all"
+                >
+                  Github Link <HiOutlineArrowRight className="text-lg" />
                 </a>
               </div>
             </div>
-          ))}
-        </div>
-
+          </motion.div>
+        ))}
       </div>
-    </section>
-
-  )
+    </div>
+    </section >
+  );
 }
-
 export default Projects;

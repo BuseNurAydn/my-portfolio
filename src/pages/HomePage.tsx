@@ -9,7 +9,7 @@ import Projects from '../components/Projects';
 const HomePage = () => {
   return (
     <div>
-        <Navbar text='Buse Nur Aydın'/>
+        <Navbar/>
         <About/>
         <Skills/>
         <Experiences/>

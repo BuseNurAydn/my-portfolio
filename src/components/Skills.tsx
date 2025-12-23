@@ -1,100 +1,52 @@
 import { skills } from '../utils/skillsData'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Htext from '../shared/Htext';
-
-
-function Arrow(props:any) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    />
-  );
-}
+import { motion } from 'framer-motion';
 
 const Skills = () => {
-  var settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    arrows: true,
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    nextArrow: <Arrow/>,
-    prevArrow: <Arrow/>,
-
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: {
-          slidesToShow: 8,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 5,
-          infinite: true,
-          dots: true,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: true,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-          arrows: false
-        }
-      }
-    ]
-  };
-
-  const containerStyle = 'xl:container xl:mx-auto';
-  const paddingStyle = 'lg:p-2 p-3';
+  const containerStyle = 'xl:container xl:mx-auto px-4 md:px-0 ';
 
   return (
-    <section id="skills" className={`${paddingStyle} bg-zinc200-color dark:bg-gray900-color `}>
-      <div className={`${containerStyle} pt-6`}>
-        <Htext>Skills</Htext>
-        <div className="text-black-color text-center pointer text-xs xl:text-sm 2xl:text-lg font-semibold rounded-lg mb-8">
-          <Slider {...settings}>
-            {skills.map((skill, index) => (
-              <div key={index} className="p-6 bg-white rounded-lg cursor-pointer">
-                <div>
-                  <img src={skill.image} alt='' className='h-16 w-16 text-center flex mx-auto'></img>
-                </div>
-                <div className='flex flex-col text-blue-color  justify-center items-center gap-y-2 p-2'>
-                  <h3 className='rounded-b-lg '>{skill.title}</h3>
-                </div>
+    <section id="skills" className="py-12 bg-zinc-50 dark:bg-gray900-color transition-colors duration-500">
+      <div className={`${containerStyle}`}>
+        <div className="flex flex-col items-center mb-12">
+          <Htext>Skills & Technologies</Htext>
+          <div className="h-1 w-32 bg-cyan-500 rounded-full"></div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          {skills.map((skill, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.05 }}
+              whileHover={{ 
+                scale: 1.05,
+                boxShadow: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)"
+              }}
+              className="group relative bg-white dark:bg-gray-800 p-8 rounded-2xl border border-gray-100 dark:border-gray-700 flex flex-col items-center justify-center transition-all duration-300"
+            >
+              {/* Logo */}
+              <div className="relative z-10 w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-4">
+                <img 
+                  src={skill.image} 
+                  alt={skill.title} 
+                  className="max-w-full max-h-full object-contain transition-all duration-500" 
+                />
               </div>
-            ))}
-          </Slider>
+
+              <h3 className="relative z-10 text-sm md:text-base font-semibold text-slate-700 dark:text-gray-300 group-hover:text-cyan-600 dark:group-hover:text-cyan-400 transition-colors duration-300">
+                {skill.title}
+              </h3>
+
+              {/* Alt Çizgi Efekti */}
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-cyan-500 group-hover:w-1/2 transition-all duration-300 rounded-t-full" />
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
   )
 }
-
 export default Skills;

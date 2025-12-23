@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion'
 import IconBar from '../assets/icons/IconBar.svg'; //heroicons
 import { BiSolidMoon, BiSolidSun } from 'react-icons/bi';
 import { TfiClose } from "react-icons/tfi";
 import { Link as ScrollLink } from 'react-scroll';
 
-const Navbar = ({ text }: { text: string }) => {
+const Navbar = () => {
   const Link = 'text-lg hover:text-blue-color dark:hover:text-cyan500-color transition duration-200 cursor-pointer ';
   const containerStyle = 'xl:container xl:mx-auto flex items-center justify-between';
 
@@ -46,26 +45,11 @@ const Navbar = ({ text }: { text: string }) => {
     { id: 'projects', label: 'Projects' }
   ];
 
-  const letters = text.split("").map(char => char === " " ? "\u00A0" : char); // Boşlukları &nbsp; ile değiştiriyoruz
-
   return (
     <nav className="py-6 shadow-xl bg-white sticky top-0 z-20 px-4 dark:bg-gray900-color dark:text-white">
       <div className={`${containerStyle}`}>
         <div style={{ display: 'flex' }}>
-          {letters.map((letter, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, x: -14 }} // Başlangıçta harf görünmüyor ve soldan
-              animate={{ opacity: 1, x: 0 }}   // Son durumda
-              transition={{
-                delay: index * 0.1, // Her harf için gecikmeli animasyon
-                duration: 0.1,      // Animasyon süresi
-              }}
-              className="font-bold text-xl text-cyan-color dark:text-cyan400-color"
-            >
-              {letter}
-            </motion.span>
-          ))}
+          <h1 className='font-bold text-cyan-600 dark:text-cyan500-color text-xl'>Buse Nur Aydın</h1>
         </div>
         {/*Desktop Menü */}
         <div>
@@ -130,5 +114,4 @@ const Navbar = ({ text }: { text: string }) => {
     </nav>
   )
 }
-
 export default Navbar;
