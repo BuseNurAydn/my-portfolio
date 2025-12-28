@@ -8,7 +8,7 @@ export const projects = [
      {
         image: sanayice,
         title: "Sanayice – E-Commerce Platform",
-        description: "A user-centric e-commerce platform developed with React.js and Redux Toolkit. Development is ongoing. Tailwind CSS was used for styling. The project is currently being refactored with Next.js and TypeScript for SEO, performance, and type-safety advantages.",
+        description: "A user-centric e-commerce platform developed with React.js and Redux Toolkit. It consists of seller and admin panels. Development is ongoing. Tailwind CSS was used for styling. The project is currently being restructured with Next.js and TypeScript for SEO, performance, and type safety advantages.",
         link:"https://github.com/BuseNurAydn/sanayice-frontend"
        
     },
